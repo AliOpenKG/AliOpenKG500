@@ -15,18 +15,18 @@ The dataset splits all data into 3 parts. Base statistical information is shown 
 AliOpenKG500 is available at [Google Drive](https://drive.google.com/drive/folders/1QgSL1wcLmA_eOQibwKxDaxVRGrMFqDMV?usp=sharing). The dataset offers two triplet formats for convenient evaluations and the main derectory of the dataset is as follows.
 
 ```
-.								            # Format 1: 
-├── entity2id.txt           # Entities to ids
-├── entityid_map.txt			  # Entity ids to labels in chinese
-├── relation2id.txt				  # Relations to ids
-├── relationid_map.txt			# Relation ids to lables in chinese
-├── train2id.txt				    # Triplets in train set to ids
-├── valid2id.txt				    # Triplets in valid set to ids
-├── other_format				    # Format 2: 
-│   ├── entity_map.txt			# Raw entities to labels in chinese
-│   ├── relation_map.txt		# Raw relations to labels in chinese
-│   ├── train					      # Triplets in train set
-└── └── valid					      # Triplets in valid set
+.	              # Format 1: 
+├── entity2id.txt         # Entities to ids
+├── entityid_map.txt        # Entity ids to labels in chinese
+├── relation2id.txt       # Relations to ids
+├── relationid_map.txt      # Relation ids to lables in chinese
+├── train2id.txt          # Triplets in train set to ids
+├── valid2id.txt          # Triplets in valid set to ids
+├── other_format          # Format 2: 
+│   ├── entity_map.txt      # Raw entities to labels in chinese
+│   ├── relation_map.txt    # Raw relations to labels in chinese
+│   ├── train             # Triplets in train set
+└── └── valid             # Triplets in valid set
 ```
 
 ### Format
