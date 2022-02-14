@@ -1,37 +1,66 @@
-## Welcome to GitHub Pages
+## AliOpenKG500
 
-You can use the [editor on GitHub](https://github.com/AliOpenKG/AliOpenKG500/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+### Infomation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**AliOpenKG500** is an open chinese E-commerce and bussiness knowledge graph dataset contained 500 relations. This dataset is refined from the [AliOpenKG](https://kg.alibaba.com/), a million-scale multi-modal dataset evolving products and consumption demands in a unified schema. AliOpenKG500 is developed for several knowledge graph embedding evaluations.
 
-### Markdown
+The dataset splits all data into 3 parts. Base statistical information is shown in the table below.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+| #Relation | #Entity | #Train (opened) | #Valid (opened) | #Test  |
+| :-------: | :-----: | :-------------: | :-------------: | :----: |
+|    500    | 269658  |     1242550     |     124255      | 124255 |
 
-```markdown
-Syntax highlighted code block
+### Data
 
-# Header 1
-## Header 2
-### Header 3
+AliOpenKG500 is available at [Google Drive](https://drive.google.com/drive/folders/1QgSL1wcLmA_eOQibwKxDaxVRGrMFqDMV?usp=sharing). The dataset offers two triplet formats for convenient evaluations and the main derectory of the dataset is as follows.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+.								# Format 1: 
+├── entity2id.txt				# Entities to ids
+├── entityid_map.txt			# Entity ids to labels in chinese
+├── relation2id.txt				# Relations to ids
+├── relationid_map.txt			# Relation ids to lables in chinese
+├── train2id.txt				# Triplets in train set to ids
+├── valid2id.txt				# Triplets in valid set to ids
+├── other_format				# Format 2: 
+│   ├── entity_map.txt			# Raw entities to labels in chinese
+│   ├── relation_map.txt		# Raw relations to labels in chinese
+│   ├── train					# Triplets in train set
+└── └── valid					# Triplets in valid set
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Format
 
-### Jekyll Themes
+**Format 1** follows style of datasets in [OpenKE](https://github.com/thunlp/OpenKE). 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AliOpenKG/AliOpenKG500/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+# train2id.txt
+1242550					# Number of triplets in file
+head_entity_id <tab> tail_entity_id <tab> relation_id <\n>
+...
 
-### Support or Contact
+# entity2id.txt
+269658					# Number of entities in file
+raw_entity_name <tab> entity_id <\n>
+...
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# entityid_map.txt
+entity_id <tab> entity_label_ch <\n>
+...
+```
+
+**Format 2** follows original style in AliOpenKG. 
+
+```
+# train
+raw_head_entity_name <tab> raw_relation_name <tab> raw_tail_entity_name <\n>
+...
+
+# entity_map.txt
+raw_entity_name <tab> entity_label_ch <\n>
+...
+```
+
+### Publications
+
+- 
