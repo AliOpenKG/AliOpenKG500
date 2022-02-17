@@ -1,6 +1,6 @@
 ## AliOpenKG500
 
-### Infomation
+### Information
 
 **AliOpenKG500** is an open chinese E-commerce and bussiness knowledge graph dataset contained 500 relations. This dataset is refined from the [AliOpenKG](https://kg.alibaba.com/), a million-scale multi-modal dataset evolving products and consumption demands in a unified schema. AliOpenKG500 is developed for several knowledge graph embedding evaluations.
 
@@ -61,6 +61,4 @@ raw_entity_name <tab> entity_label_ch <\n>
 ...
 ```
 
-### Publications
 
-- 
